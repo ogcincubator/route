@@ -1,0 +1,92 @@
+@prefix rte:   <https://raw.githubusercontent.com/cportele/route/master/route#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+rte:Route
+        a                   owl:Class ;
+        skos:definition     "A way to get from a starting point to a destination."@en .
+
+rte:RouteComponent
+        a                   owl:Class ;
+        skos:definition     "A component of the route."@en ;
+        rdfs:comment        "For example, an overview of the complete route or a segment or waypoint along the route."@en .
+
+rte:RouteOverview
+        a                   owl:Class ;
+        rdfs:subClassOf     rte:RouteComponent ;
+        skos:definition     "An overview of the complete route from start to destination with the main properties of the route."@en .
+
+rte:RouteSegment
+        a                   owl:Class ;
+        rdfs:subClassOf     rte:RouteComponent ;
+        skos:definition     "An overview of the complete route from start to destination with the main properties of the route."@en .
+
+rte:Waypoint
+        a                   owl:Class ;
+        rdfs:subClassOf     rte:RouteComponent ;
+        skos:definition     "An overview of the complete route from start to destination with the main properties of the route."@en .
+
+rte:Start
+        a                   owl:Class ;
+        rdfs:subClassOf     rte:Waypoint ;
+        skos:definition     "An overview of the complete route from start to destination with the main properties of the route."@en .
+
+rte:Destination
+        a                   owl:Class ;
+        rdfs:subClassOf     rte:Waypoint ;
+        skos:definition     "An overview of the complete route from start to destination with the main properties of the route."@en .
+
+rte:RouteDefinition
+        a                   owl:Class ;
+        skos:definition     "The start and end point of the route plus any boundary conditions and constraints to consider."@en .
+
+rte:status
+        a                   owl:DatatypeProperty ;
+        rdfs:domain         rte:Route ;
+        rdfs:range          xsd:string ;
+        skos:definition     "The processing status of the route: 'accepted': the routing job is queued for execution; 'running': the route is being computed; 'successful': the route is available; 'failed': the route could not be computed"@en .
+
+rte:length
+        a                   owl:DatatypeProperty ;
+        rdfs:domain         rte:RouteComponent ;
+        rdfs:range          xsd:double ;
+        skos:definition     "The length of the route component in metres."@en .
+
+rte:duration
+        a                   owl:DatatypeProperty ;
+        rdfs:domain         rte:RouteComponent ;
+        rdfs:range          xsd:double ;
+        skos:definition     "The estimated duration to travel along the route component in seconds."@en .
+
+rte:instructions
+        a                   owl:DatatypeProperty ;
+        rdfs:domain         rte:RouteSegment ;
+        rdfs:range          xsd:string ;
+        skos:definition     "An instruction for the maneuver at the end of the segment. Standard values are 'continue', 'left' and 'right'."@en .
+
+rte:text
+        a                   owl:DatatypeProperty ;
+        rdfs:domain         rte:RouteSegment ;
+        rdfs:range          xsd:string ;
+        skos:definition     "Detailed instructions for the maneuver."@en .
+
+rte:roadName
+        a                   owl:DatatypeProperty ;
+        rdfs:domain         rte:RouteSegment ;
+        rdfs:range          xsd:string ;
+        skos:definition     "The road/street name of the segment."@en .
+
+rte:components
+        a                   owl:ObjectProperty ;
+        rdfs:domain         rte:Route ;
+        rdfs:range          rte:RouteComponent ;
+        skos:definition     "Detailed information about the route, consisting of the start and end location, the overview of the route path and information about each segment along the route."@en .
+
+rte:definedBy
+        a                   owl:ObjectProperty ;
+        rdfs:domain         rte:Route ;
+        rdfs:range          rte:RouteDefinition ;
+        skos:definition     "The information used for the route computation."@en .
