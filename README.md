@@ -13,6 +13,8 @@ In addition, there are two presentations that provide an overview:
 * [OGC Technical Committee, Transportation Ad-hoc, November 2019](191120-Slides-OGC-W3C-Transportation-Adhoc.pdf)
 * [W3C Automotive and Transportation Working Group, March 2020](200324-Slides-W3C-Auto-F2F-Routing-API-and-Model.pdf)
 
+This work is input to the [W3C Transportation Ontology Coordination Committee (TOCC)](https://github.com/w3c/tocc).
+
 ## Scenario
 The pilot consisted of three scenarios. These were:
 
