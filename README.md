@@ -6,12 +6,16 @@ This repository documents the Route model that was developed and implemented in 
 The information in this repository is derived from the two reports that document the results of the pilot:
 
 * [OGC Routing Pilot Engineering Report, OGC document 19-041r3](http://docs.opengeospatial.org/per/19-041r3.html)
-* [Routing API Engineering Report, OGC document 19-040](http://docs.opengeospatial.org/per/19-040.html)
+* [OGC Routing API Engineering Report, OGC document 19-040](http://docs.opengeospatial.org/per/19-040.html)
 
 In addition, there are two presentations that provide an overview:
 
 * [OGC Technical Committee, Transportation Ad-hoc, November 2019](191120-Slides-OGC-W3C-Transportation-Adhoc.pdf)
 * [W3C Automotive and Transportation Working Group, March 2020](200324-Slides-W3C-Auto-F2F-Routing-API-and-Model.pdf)
+
+After the OGC Routing Pilot, the Route model and the Routing API have been used and extended in the OGC SCIRA Pilot in a Smart Cities context:
+
+* [OGC SCIRA Pilot Engineering Report, OGC document 20-011, Section 10.1 Traffic Management & Routing Model](https://docs.opengeospatial.org/per/20-011.html#_d15_traffic_management_routing_model)
 
 This work is input to the [W3C Transportation Ontology Coordination Committee (TOCC)](https://github.com/w3c/tocc).
 
